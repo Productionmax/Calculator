@@ -24,6 +24,10 @@ function multiply(multiplyArr) {
     return product;
 };
 
+function divide(num1,num2){
+    return num1/num2;
+}
+
 function power(lower,indices) {
     let exponential = lower ** indices;
     return exponential;
@@ -48,5 +52,5 @@ function operate(num1,num2,operator){
         return multiply(num1,num2);
     } else if (operator=="/" ){
         return divide(num1,num2);
-    }
+    } 
 }
