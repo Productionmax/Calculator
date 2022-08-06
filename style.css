@@ -8,9 +8,12 @@
     align-items: center;
 
 }
+.screen{
+    padding: 0;
+}
 .pads{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
 }
 .number{
     align-items: center;
@@ -40,3 +43,9 @@
     width: auto;
     
 }
+.clear{
+    grid-column:4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
