@@ -1,6 +1,6 @@
 //DOM selectors
-const numButtons = document.querySelectorAll(`[data-number]`);
-
+const numBtn = document.querySelectorAll(`[data-number]`);
+const operatorBtn = document.querySelectorAll(`[data-operator]`);
 
 
 //Calculation

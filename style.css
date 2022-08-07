@@ -56,9 +56,6 @@
     
 }
 .clear{
-    grid-column:4;
-    grid-row-start: 2;
-    grid-row-end: 6;
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -84,5 +81,15 @@
     touch-action: manipulation;
     vertical-align: baseline;
     width: auto;
+}
+#del{
+    grid-column:4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+#clear{
+    grid-column: 4;
+    grid-row-start:4;
+    grid-row-end:6;
 }
 
