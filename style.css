@@ -1,3 +1,10 @@
+body{
+    height:100%;
+    background-image: linear-gradient(to right, red , yellow);
+    padding:0;
+    margin:0;
+    font-family:'Times New Roman', Times, serif;
+}
 .calculator{
     display:flex;
     justify-content: center;
@@ -15,13 +22,21 @@
     border:2px #eee solid;
     border-radius:5px;
     /* margin-bottom: 20px; */
-    background-color: #eee;
+    background-color:rgba(202, 21, 21, 0.22);
     text-align: right;
     word-wrap:break-word;
     word-break:break-all;
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row: 1;
+    justify-content: space-between;
+}
+.previous-operand{
+    opacity: 75%;
+    font-size: 1.5rem;
+}
+.current-operand{
+    font-size: 2.5rem;
 }
 .pads{
     display:grid;
@@ -93,3 +108,6 @@
     grid-row-end:6;
 }
 
+button:hover{
+    opacity: .95;
+}

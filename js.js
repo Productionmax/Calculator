@@ -1,7 +1,10 @@
 //DOM selectors
 const numBtn = document.querySelectorAll(`[data-number]`);
 const operatorBtn = document.querySelectorAll(`[data-operator]`);
+const clearButton = document.getElementById('del');
+const allClearButton = document.getElementById('clear');
 
+//Set eventlisteners
 
 //Calculation
 function add (add1,add2) {
