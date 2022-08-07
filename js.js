@@ -1,3 +1,9 @@
+//DOM selectors
+const numButtons = document.querySelectorAll(`[data-number]`);
+
+
+
+//Calculation
 function add (add1,add2) {
     let addition = add1 + add2;
     return addition;
