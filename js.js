@@ -1,10 +1,42 @@
+//Class for calculator 
+class calculator {
+    constructor(previousOperand,currentOperand){
+        this.previousOperand = previousOperand
+        this.currentOperand = currentOperand
+        this.clear()
+    }
+    clear(){
+        this.previousOperand = ""
+        this.currentOperand = ""
+        this.ope
+    }
+    delete(){
+
+    }
+    appendNumber(number){
+
+    }
+    chooseOperation(operation){
+
+    }
+    compute(){
+        
+    }
+    updateDisplay(){
+
+    }
+}
+
 //DOM selectors
 const numBtn = document.querySelectorAll(`[data-number]`);
 const operatorBtn = document.querySelectorAll(`[data-operator]`);
 const clearButton = document.getElementById('del');
 const allClearButton = document.getElementById('clear');
-
+const previousOperand = document.querySelector('[data-previous-operand]');
+const currentOperand = document.querySelector('[data-current-operand]');
 //Set eventlisteners
+const calculator = new calculator(previousOperand,currentOperand);
+
 
 //Calculation
 function add (add1,add2) {
@@ -63,3 +95,4 @@ function operate(num1,num2,operator){
         return divide(num1,num2);
     } 
 }
+
