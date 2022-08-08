@@ -40,8 +40,17 @@ class Calculator {
                 computation = subtract(prev,current);
                 break;
             case 'x':
-                computation = multiply()
+                computation = multiply(prev,current);
+                break;
+            case '÷':
+                computation = divide(prev,current);
+                break;
+            default:
+                return;
         }
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = '';
     }
     updateDisplay(){
         this.currentOperandText.innerText = this.currentOperand;
