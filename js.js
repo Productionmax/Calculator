@@ -31,6 +31,17 @@ class Calculator {
         let computation;
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
+        if(isNaN(prev) || isNaN(current)) return;
+        switch (this.operation){
+            case '+':
+                computation = add(prev,current);
+                break;
+            case '-':
+                computation = subtract(prev,current);
+                break;
+            case 'x':
+                computation = multiply()
+        }
     }
     updateDisplay(){
         this.currentOperandText.innerText = this.currentOperand;
@@ -87,12 +98,8 @@ function sum(sumArr) {
     return total;
 };
 
-function multiply(multiplyArr) {
-    let product = 1;
-    for (let i=0;i<multiplyArr.length;i++){
-        product = product * multiplyArr[i];
-    } 
-    return product;
+function multiply(num1,num2) {
+    return num1*num2;
 };
 
 function divide(num1,num2){
