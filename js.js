@@ -14,11 +14,15 @@ class Calculator {
 
     }
     appendNumber(number){
-        this.currentOperand = number;
+        if (number === '.' && this.currentOperand.includes('.')) return;
+        this.currentOperand = this.currentOperand.toString() + number.toString(); //Turns to strings to add number without javascirpt calculation
 
     }
     chooseOperation(operation){
-
+        if(this.currentOperand === '') return;
+        this.operation = operation;
+        this.previousOperand = this.currentOperand; //The top operand will be equal to the bottom 
+        this.currentOperand = ""; // And then the bottom main operand will be cleared
     }
     compute(){
         
@@ -45,6 +49,13 @@ numBtn.forEach(button => {
         calculator.updateDisplay();
     })
 })
+operatorBtn.forEach(button => {
+    button.addEventListener('click',()=>{
+        calculator.chooseOperation(button.innerText);
+        calculator.updateDisplay();
+    })
+})
+
 
 //Calculation
 function add (add1,add2) {
