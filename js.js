@@ -20,12 +20,17 @@ class Calculator {
     }
     chooseOperation(operation){
         if(this.currentOperand === '') return;
+        if(this.previousOperand !== ''){
+            this.compute();
+        }
         this.operation = operation;
         this.previousOperand = this.currentOperand; //The top operand will be equal to the bottom 
         this.currentOperand = ""; // And then the bottom main operand will be cleared
     }
     compute(){
-        
+        let computation;
+        const prev = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
     }
     updateDisplay(){
         this.currentOperandText.innerText = this.currentOperand;
@@ -40,6 +45,7 @@ const clearButton = document.getElementById('del');
 const allClearButton = document.getElementById('clear');
 const previousOperandText = document.querySelector('[data-previous-operand]');
 const currentOperandText = document.querySelector('[data-current-operand]');
+const equalBtn = document.getElementById('=');
 //Set eventlisteners
 const calculator = new Calculator(previousOperandText,currentOperandText);
 
@@ -54,6 +60,11 @@ operatorBtn.forEach(button => {
         calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
     })
+})
+
+equalBtn.addEventListener('click',button => {
+    calculator.compute();
+    calculator.updateDisplay();
 })
 
 
