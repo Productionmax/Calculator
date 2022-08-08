@@ -87,7 +87,10 @@ equalBtn.addEventListener('click',button => {
     calculator.updateDisplay();
 })
 
-
+allClearButton.addEventListener('click',button => {
+    calculator.clear();
+    calculator.updateDisplay();
+})
 //Calculation
 function add (add1,add2) {
     let addition = add1 + add2;
