@@ -1,6 +1,6 @@
 body{
     height:100%;
-    background-image: linear-gradient(to right, red , yellow);
+    background-color: #fcde67;
     padding:0;
     margin:0;
     font-family:'Times New Roman', Times, serif;
@@ -18,11 +18,10 @@ body{
 
 }
 .screen{
-    padding: 10px 20px;
-    border:2px #eee solid;
+    padding: 30px 30px;
+    opacity: 0.80;
     border-radius:5px;
-    /* margin-bottom: 20px; */
-    background-color:rgba(202, 21, 21, 0.22);
+    background-color: #c8d8e4;
     text-align: right;
     word-wrap:break-word;
     word-break:break-all;
@@ -43,59 +42,46 @@ body{
     grid-template-columns: repeat(4,1fr);
 }
 .number{
-    align-items: center;
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-    
+     align-items: center;
+     border: 2px solid #111;
+     border-radius: 8px;
+     box-sizing: border-box;
+     color: #111;
+     cursor: pointer;
+     display: flex;
+     font-family: Inter,sans-serif;
+     font-size: 16px;
+     height: 48px;
+     justify-content: center;
+     line-height: 24px;
+     max-width: 100%;
+     padding: 0 25px;
+     position: relative;
+     text-align: center;
+     text-decoration: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
 }
 .clear{
     align-items: center;
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    border: 2px solid #111;
+    border-radius: 8px;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
+    color: #111;
     cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    font-family: Inter,sans-serif;
     font-size: 16px;
-    font-weight: 600;
     justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    text-align: center;
     text-decoration: none;
-    transition: all 250ms;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
 }
 #del{
     grid-column:4;
@@ -110,4 +96,7 @@ body{
 
 button:hover{
     opacity: .95;
+}
+button{
+   background-color: #5bccf6;
 }
