@@ -6,8 +6,8 @@ class Calculator {
         this.clear()
     }
     clear(){
-        this.previousOperand = "" ;
-        this.currentOperand = "" ;
+        this.previousOperand = '' ;
+        this.currentOperand = '' ;
         this.operation = undefined;
     }
     delete(){
@@ -54,9 +54,9 @@ class Calculator {
     }
     updateDisplay(){
         this.currentOperandText.innerText = this.currentOperand;
-        if (this.operation != null){
-            this.previousOperandText.innerText = `${this.previousOperand} ${this.operation}`;
-        }
+        if (this.operation !== undefined){
+            this.previousOperandText.innerText = `${this.previousOperand} ${this.operation}`; //If it is undefined use the else statement 
+        } else{this.previousOperandText.innerText = this.previousOperand;}
         
     }
 }
