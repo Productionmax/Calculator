@@ -11,7 +11,7 @@ class Calculator {
         this.operation = undefined;
     }
     delete(){
-
+        this.currentOperand = this.currentOperand.toString().slice(0,-1);
     }
     appendNumber(number){
         if (number === '.' && this.currentOperand.includes('.')) return;
@@ -61,7 +61,7 @@ class Calculator {
 //DOM selectors
 const numBtn = document.querySelectorAll(`[data-number]`);
 const operatorBtn = document.querySelectorAll(`[data-operator]`);
-const clearButton = document.getElementById('del');
+const delButton = document.getElementById('del');
 const allClearButton = document.getElementById('clear');
 const previousOperandText = document.querySelector('[data-previous-operand]');
 const currentOperandText = document.querySelector('[data-current-operand]');
@@ -91,6 +91,11 @@ allClearButton.addEventListener('click',button => {
     calculator.clear();
     calculator.updateDisplay();
 })
+
+delButton.addEventListener('click',button => {
+    calculator.delete();
+    calculator.updateDisplay();
+} )
 //Calculation
 function add (add1,add2) {
     let addition = add1 + add2;
