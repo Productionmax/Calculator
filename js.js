@@ -77,6 +77,12 @@ numBtn.forEach(button => {
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
     })
+    document.addEventListener('keydown',(e)=>{
+        if (e.key==button.innerText){
+            calculator.appendNumber(button.innerText);
+            calculator.updateDisplay();
+        }
+    })
 })
 operatorBtn.forEach(button => {
     button.addEventListener('click',()=>{
